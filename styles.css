@@ -5,7 +5,10 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: #639;
+    background: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url(https://source.unsplash.com/random/1600×900/?landscape);
     font-size: 120%;
 }
@@ -68,4 +71,19 @@ h1.temp {
 .flex {
     display: flex;
     align-items: center;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
 }
